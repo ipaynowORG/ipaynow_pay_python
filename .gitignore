@@ -1,0 +1,10 @@
+
+\.idea/
+
+ipaynowPythonSdk/ipaynow\.egg-info/
+
+ipaynowPythonSdk/dist/
+
+ipaynowPythonSdk/build/
+
+ipaynowPythonSdk/ipaynow/__pycache__/

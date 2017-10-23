@@ -1,4 +1,5 @@
-# iPaynow-Python
+# ipaynow_pay_python
+现在支付交易接口demo python版
 
 
 * 使用方法:

@@ -32,11 +32,11 @@
 
    使用方法:
 
-    1.进入ipaynowPythonSdk 文件夹
+    1.cd 进入ipaynowPythonSdk 文件夹
     2.执行 "python setup.py install"
     3.在代码中 import ipaynow
      参考示例代码
      示例代码
-     进入example文件夹
+     cd 进入example文件夹
      运行 python Trade08.py 
          

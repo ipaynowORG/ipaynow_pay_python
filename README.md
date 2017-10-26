@@ -27,7 +27,7 @@
     - Trade08.py（主扫支付）：payChannelType（12 支付宝支付，13 微信支付），outputType（0 返回二维码，1返回支付链接）
     - Trade0600.py （公众号支付）：payChannelType（12 支付宝支付，13 微信支付），outputType （0-公众号0模式，1-公众号1模式 目前支持0模式）
     - Trade0601.py （H5支付）：payChannelType（12 支付宝支付，13 微信支付）
-    - Trade04.py （PC支付）：payChannelType（12 支付宝支付，13 微信支付）
+    - Trade04.py （PC支付）：payChannelType（12 支付宝支付）
 ### 2.2 DEMO使用 ###
 
    使用方法:

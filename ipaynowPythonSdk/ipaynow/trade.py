@@ -13,6 +13,8 @@ from pip._vendor import requests
     appId:商户应用id
     appKey:商户应用秘钥
     mhtOrderDetail：订单详情
+    notifyUrl:商户后台通知URL
+    frontNotifyUrl :商户前台通知URL
     payChannelType：支付渠道（12支付宝，13微信）
     amt:订单金额单位分，默认1分
     orderno:订单号（默认系统时间）
@@ -26,6 +28,7 @@ def trade0600(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,pay
     appId:商户应用id
     appKey:商户应用秘钥
     mhtOrderDetail：订单详情
+    notifyUrl:商户后台通知URL
     payChannelType：支付渠道（12支付宝，13微信）
     amt:订单金额单位分，默认1分
     orderno:订单号（默认系统时间）
@@ -39,6 +42,7 @@ def trade08(appId,appKey,ordername,mhtOrderDetail,notifyUrl,payChannelType,outpu
     appId:商户应用id
     appKey:商户应用秘钥
     mhtOrderDetail：订单详情
+    notifyUrl:商户后台通知URL
     payChannelType：支付渠道（12支付宝，13微信）
     amt:订单金额单位分，默认1分
     orderno:订单号（默认系统时间）
@@ -52,6 +56,8 @@ def trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,payChannelType,chann
     appId:商户应用id
     appKey:商户应用秘钥
     mhtOrderDetail：订单详情
+    notifyUrl:商户后台通知URL
+    frontNotifyUrl :商户前台通知URL
     payChannelType：支付渠道（12支付宝，13微信）
     amt:订单金额单位分，默认1分
     orderno:订单号（默认系统时间）

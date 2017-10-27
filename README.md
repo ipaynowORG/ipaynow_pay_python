@@ -41,7 +41,7 @@
  - 公众号支付
     
    
-         '''
+          '''
         appId:商户应用id
         appKey:商户应用秘钥
         mhtOrderDetail：订单详情
@@ -69,29 +69,29 @@
  -  被扫支付  
          
  
+          '''
+         appId:商户应用id
+         appKey:商户应用秘钥
+         mhtOrderDetail：订单详情
+         payChannelType：支付渠道（12支付宝，13微信）
+         amt:订单金额单位分，默认1分
+         orderno:订单号（默认系统时间）
+         channelAuthCode ; 支付授权码
          '''
-        appId:商户应用id
-        appKey:商户应用秘钥
-        mhtOrderDetail：订单详情
-        payChannelType：支付渠道（12支付宝，13微信）
-        amt:订单金额单位分，默认1分
-        orderno:订单号（默认系统时间）
-        channelAuthCode ; 支付授权码
-        '''
-        def trade05(appId,appKey,ordername,mhtOrderDetail,payChannelType,channelAuthCode,amt = "1", orderno = ''):
+         def trade05(appId,appKey,ordername,mhtOrderDetail,payChannelType,channelAuthCode,amt = "1", orderno = ''):
    
    - PC 支付
    
-        '''
-        appId:商户应用id
-        appKey:商户应用秘钥
-        mhtOrderDetail：订单详情
-        payChannelType：支付渠道（12支付宝，13微信）
-        amt:订单金额单位分，默认1分
-        orderno:订单号（默认系统时间）
-        outputType：0.返回支付跳转链接 2.返回支付页面（html）
-        '''
-        def trade04(appId,appKey,ordername,mhtOrderDetail,payChannelType,amt = "1", orderno = '',outputType=0):
+         '''
+         appId:商户应用id
+         appKey:商户应用秘钥
+         mhtOrderDetail：订单详情
+         payChannelType：支付渠道（12支付宝，13微信）
+         amt:订单金额单位分，默认1分
+         orderno:订单号（默认系统时间）
+         outputType：0.返回支付跳转链接 2.返回支付页面（html）
+         '''
+         def trade04(appId,appKey,ordername,mhtOrderDetail,payChannelType,amt = "1", orderno = '',outputType=0):
    
    
 ### 2.2 DEMO使用 ###

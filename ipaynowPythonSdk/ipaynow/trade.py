@@ -18,8 +18,8 @@ from pip._vendor import requests
     orderno:订单号（默认系统时间）
     outputType ; 0-公众号0模式
 '''
-def trade0600(appId,appKey,ordername,mhtOrderDetail,payChannelType,outputType,amt = "1", orderno = ''):
-   return trade(appId,appKey,ordername,mhtOrderDetail,payChannelType,"0600",amt = amt, orderno = orderno,outputType=outputType)
+def trade0600(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,payChannelType,outputType,amt = "1", orderno = ''):
+   return trade(appId,appKey,ordername,mhtOrderDetail,notifyUrl=notifyUrl,frontNotifyUrl=frontNotifyUrl,payChannelType=payChannelType,deviceType="0600",amt = amt, orderno = orderno,outputType=outputType)
 
 '''
     主扫支付
@@ -31,8 +31,8 @@ def trade0600(appId,appKey,ordername,mhtOrderDetail,payChannelType,outputType,am
     orderno:订单号（默认系统时间）
     outputType ; 0 返回二维码串 1 返回支付链接
 '''
-def trade08(appId,appKey,ordername,mhtOrderDetail,payChannelType,outputType,amt = "1", orderno = ''):
-   return trade(appId,appKey,ordername,mhtOrderDetail,payChannelType,"08",amt = amt, orderno = orderno,outputType=outputType)
+def trade08(appId,appKey,ordername,mhtOrderDetail,notifyUrl,payChannelType,outputType,amt = "1", orderno = ''):
+   return trade(appId,appKey,ordername,mhtOrderDetail,notifyUrl=notifyUrl,payChannelType=payChannelType,deviceType="08",amt = amt, orderno = orderno,outputType=outputType)
 
 '''
     被扫支付
@@ -44,8 +44,8 @@ def trade08(appId,appKey,ordername,mhtOrderDetail,payChannelType,outputType,amt 
     orderno:订单号（默认系统时间）
     channelAuthCode ; 支付授权码
 '''
-def trade05(appId,appKey,ordername,mhtOrderDetail,payChannelType,channelAuthCode,amt = "1", orderno = ''):
-   return trade(appId,appKey,ordername,mhtOrderDetail,payChannelType,"05",amt = amt, orderno = orderno,channelAuthCode=channelAuthCode)
+def trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,payChannelType,channelAuthCode,amt = "1", orderno = ''):
+   return trade(appId,appKey,ordername,mhtOrderDetail,notifyUrl=notifyUrl,payChannelType=payChannelType,deviceType="05",amt = amt, orderno = orderno,channelAuthCode=channelAuthCode)
 
 '''
     H5支付
@@ -57,8 +57,8 @@ def trade05(appId,appKey,ordername,mhtOrderDetail,payChannelType,channelAuthCode
     orderno:订单号（默认系统时间）
     outputType ; 0-公众号0模式
 '''
-def trade0601(appId,appKey,ordername,mhtOrderDetail,payChannelType,outputType,amt = "1", orderno = ''):
-   return trade(appId,appKey,ordername,mhtOrderDetail,payChannelType,"0601",amt = amt, orderno = orderno,outputType=outputType)
+def trade0601(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,payChannelType,outputType,amt = "1", orderno = ''):
+   return trade(appId,appKey,ordername,mhtOrderDetail,notifyUrl=notifyUrl,frontNotifyUrl=frontNotifyUrl,payChannelType=payChannelType,deviceType="0601",amt = amt, orderno = orderno,outputType=outputType)
 
 '''
     PC支付
@@ -66,15 +66,17 @@ def trade0601(appId,appKey,ordername,mhtOrderDetail,payChannelType,outputType,am
     appKey:商户应用秘钥
     mhtOrderDetail：订单详情
     payChannelType：支付渠道（12支付宝，13微信）
+    notifyUrl:商户后台通知URL
+    frontNotifyUrl :商户前台通知URL
     amt:订单金额单位分，默认1分
     orderno:订单号（默认系统时间）
     outputType：0.返回支付跳转链接 2.返回支付页面（html）
 '''
-def trade04(appId,appKey,ordername,mhtOrderDetail,payChannelType,amt = "1", orderno = '',outputType=0):
-   return trade(appId,appKey,ordername,mhtOrderDetail,payChannelType,"04",amt = amt, orderno = orderno,outputType=outputType)
+def trade04(appId,appKey,ordername,mhtOrderDetail,payChannelType,notifyUrl,frontNotifyUrl,amt = "1", orderno = '',outputType=0):
+   return trade(appId,appKey,ordername,mhtOrderDetail,payChannelType,notifyUrl=notifyUrl,frontNotifyUrl=frontNotifyUrl,deviceType="04",amt = amt, orderno = orderno,outputType=outputType)
 
 
-def trade(appId,appKey,ordername,mhtOrderDetail,payChannelType,deviceType, amt = "1", orderno = '',outputType = '0',channelAuthCode=''):
+def trade(appId,appKey,ordername,mhtOrderDetail,payChannelType,deviceType,notifyUrl,frontNotifyUrl="", amt = "1", orderno = '',outputType = '0',channelAuthCode=''):
     paypara = {
         'funcode':'WP001',
         'version': '1.0.0',
@@ -83,8 +85,7 @@ def trade(appId,appKey,ordername,mhtOrderDetail,payChannelType,deviceType, amt =
         'mhtCurrencyType':'156',
         'mhtOrderDetail':mhtOrderDetail,
         'mhtOrderTimeOut':3600,
-        'notifyUrl':'http://posp.ipaynow.cn:10808/cpgatetest/notify',
-        'frontNotifyUrl':'http://posp.ipaynow.cn:10808/cpgatetest/frontnotify',
+        'notifyUrl':notifyUrl,
         'mhtCharset': 'UTF-8',
         'deviceType': deviceType,
         'payChannelType' : payChannelType,
@@ -92,6 +93,8 @@ def trade(appId,appKey,ordername,mhtOrderDetail,payChannelType,deviceType, amt =
         'mhtSignType':'MD5'
 
     }
+    if len(frontNotifyUrl) > 0 :
+        paypara["frontNotifyUrl"] = frontNotifyUrl
     if len(channelAuthCode) > 0:
         paypara['channelAuthCode']=channelAuthCode
     timestr = time.strftime('%Y%m%d%H%M%S',time.localtime(time.time()))

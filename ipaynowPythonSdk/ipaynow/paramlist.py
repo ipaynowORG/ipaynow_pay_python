@@ -7,7 +7,8 @@
 # key name 'must' indicates parameter
 # WP001-无插件聚合支付
 WP001_PostList = [
-    {'name': 'funcode', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 5, 'desp': "功能码"},
+    {'name': 'funcode', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 5, 'desp': "功能码"},
+    {'name': 'version', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 5, 'desp': "版本1.0.0"},
     {'name': 'appId', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户应用唯一标识"},
     {'name': 'mhtOrderNo', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户订单号"},
     {'name': 'mhtOrderName', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户商品名称"},
@@ -20,14 +21,14 @@ WP001_PostList = [
     {'name': 'notifyUrl', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 200, 'desp': "商户后台通知URL"},
     {'name': 'frontNotifyUrl', 'mandatory': 'N', 'md5': 'Y', 'type': 'str', 'len': 200, 'desp': "商户前台通知URL"},
     {'name': 'mhtCharset', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 16, 'desp': "商户字符编码-UTF8"},
-    {'name': 'deviceType', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 4, 'desp': "设备类型"},
+    {'name': 'deviceType', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 4, 'desp': "设备类型"},
     {'name': 'payChannelType', 'mandatory': 'N', 'md5': 'Y', 'type': 'str', 'len': 2, 'desp': "用户所选渠道类型"},
     {'name': 'channelAuthCode', 'mandatory': 'N', 'md5': 'Y', 'type': 'str', 'len': 20, 'desp': "渠道编号"},
     {'name': 'mhtReserved', 'mandatory': 'N', 'md5': 'Y', 'type': 'str', 'len': 100, 'desp': "商户保留域"},
     {'name': 'consumerId', 'mandatory': 'N', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "消费者ID"},
     {'name': 'outputType', 'mandatory': 'N', 'md5': 'Y', 'type': 'str', 'len': 2, 'desp': "输出格式"},
-    {'name': 'mhtSubAppId', 'mandatory': 'N', 'md5': 'N', 'type': 'str', 'len': 64, 'desp': "公众号appId"},
-    {'name': 'mhtSignType', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 3, 'desp': "商户签名方法-MD5"},
+    {'name': 'mhtSubAppId', 'mandatory': 'N', 'md5': 'Y', 'type': 'str', 'len': 64, 'desp': "公众号appId"},
+    {'name': 'mhtSignType', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 3, 'desp': "商户签名方法-MD5"},
     {'name': 'mhtSignature', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 64, 'desp': "商户数据签名"}
 
 ]
@@ -37,6 +38,7 @@ WP001_PostList = [
 # 支付交易同步返回
 WP001_RespList = [
     {'name': 'funcode', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 4, 'desp': "功能码"},
+    {'name': 'version', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 5, 'desp': "版本1.0.0"},
     {'name': 'appId', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 40, 'desp': "商户应用唯一标识"},
     {'name': 'mhtOrderNo', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 40, 'desp': "商户订单号"},
     {'name': 'responseTime', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 40, 'desp': "响应时间"},
@@ -49,6 +51,7 @@ WP001_RespList = [
 # 接口接入URL：https://api.ipaynow.cn  请求类型：POST  由商户发起
 MQ001_PostList = [
     {'name': 'funcode', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 5, 'desp': "功能码"},
+    {'name': 'version', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 5, 'desp': "版本1.0.0"},
     {'name': 'appId', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户应用唯一标识"},
     {'name': 'deviceType', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 4, 'desp': "设备类型"},
     {'name': 'mhtOrderNo', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户订单号"},
@@ -61,6 +64,7 @@ MQ001_PostList = [
 # 支付交易同步返回
 MQ001_RespList = [
     {'name': 'appId', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户应用唯一标识"},
+    {'name': 'version', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 5, 'desp': "版本1.0.0"},
     {'name': 'mhtOrderNo', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户订单号"},
     {'name': 'mhtOrderName', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户商品名称"},
     {'name': 'mhtOrderType', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 2, 'desp': "订单交易类型"},
@@ -85,6 +89,7 @@ MQ001_RespList = [
 # 现在支付的聚合支付服务端异步发起：  --通讯方式：HTTP POST 方式--
 N001_QueryList = [
     {'name': 'funcode', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 4, 'desp': "功能码"},
+    {'name': 'version', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 5, 'desp': "版本1.0.0"},
     {'name': 'appId', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户应用唯一标识"},
     {'name': 'mhtOrderNo', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户订单号"},
     {'name': 'mhtOrderName', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户商品名称"},
@@ -112,6 +117,7 @@ N001_RespList = [
 # N002-商户前端支付结果通知
 N002_NotifyList = [
     {'name': 'funcode', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 4, 'desp': "功能码"},
+    {'name': 'version', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 5, 'desp': "版本1.0.0"},
     {'name': 'appId', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户应用唯一标识"},
     {'name': 'mhtOrderNo', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户订单号"},
     {'name': 'mhtCharset', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 6, 'desp': "商户字符编码"},

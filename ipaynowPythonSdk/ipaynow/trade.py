@@ -36,6 +36,21 @@ def wx_trade0600(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,
 def ali_trade0600(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = ''):
    return trade(appId,appKey,ordername,mhtOrderDetail,notifyUrl=notifyUrl,frontNotifyUrl=frontNotifyUrl,payChannelType="12",deviceType="0600",amt = amt, orderno = orderno,outputType=outputType)
 
+
+'''
+    手Q公众号支付
+    appId:商户应用id
+    appKey:商户应用秘钥
+    mhtOrderDetail：订单详情
+    notifyUrl:商户后台通知URL
+    frontNotifyUrl :商户前台通知URL
+    amt:订单金额单位分，默认1分
+    orderno:订单号（默认系统时间）
+    outputType ; 0-公众号0模式
+'''
+def handq_trade0600(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = ''):
+   return trade(appId,appKey,ordername,mhtOrderDetail,notifyUrl=notifyUrl,frontNotifyUrl=frontNotifyUrl,payChannelType="25",deviceType="0600",amt = amt, orderno = orderno,outputType=outputType)
+
 '''
     微信主扫支付
     appId:商户应用id
@@ -141,7 +156,7 @@ def ali_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,
     orderno:订单号（默认系统时间）
     channelAuthCode ; 支付授权码
 '''
-def ali_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,amt = "1", orderno = ''):
+def handq_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,amt = "1", orderno = ''):
    return trade(appId,appKey,ordername,mhtOrderDetail,notifyUrl=notifyUrl,payChannelType="25",deviceType="05",amt = amt, orderno = orderno,channelAuthCode=channelAuthCode)
 
 

@@ -56,8 +56,60 @@ MQ001_PostList = [
     {'name': 'deviceType', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 4, 'desp': "设备类型"},
     {'name': 'mhtOrderNo', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户订单号"},
     {'name': 'mhtCharset', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 6, 'desp': "商户字符集"},
-    {'name': 'mhtSignType', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 6, 'desp': "签名方法"},
+    {'name': 'mhtSignType', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 6, 'desp': "签名方法"},
+    {'name': 'mhtSignature', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 64, 'desp': "数据签名"}
+]
+
+# R001-退款接口
+# 接口接入URL：https://pay.ipaynow.cn/refund/refundOrder 请求类型：POST
+R001_PostList = [
+    {'name': 'funcode', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 5, 'desp': "功能码"},
+    {'name': 'appId', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户应用唯一标识"},
+    {'name': 'mhtRefundNo', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户退款单号"},
+    {'name': 'mhtOrderNo', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "原商户订单号"},
+    {'name': 'amount', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 10, 'desp': "商户退款金额"},
+    {'name': 'reason', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 256, 'desp': "退款原因"},
+    {'name': 'mhtCharset', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 6, 'desp': "商户字符集"},
+    {'name': 'signType', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 6, 'desp': "签名方法"},
+    {'name': 'mhtSignature', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 64, 'desp': "数据签名"}
+]
+
+
+# Q001-退款查询接口
+# 接口接入URL：https://pay.ipaynow.cn/refund/refundQuery
+Q001_PostList = [
+    {'name': 'funcode', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 5, 'desp': "功能码"},
+    {'name': 'appId', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户应用唯一标识"},
+    {'name': 'mhtRefundNo', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户退款单号"},
+    {'name': 'mhtCharset', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 6, 'desp': "商户字符集"},
+    {'name': 'signType', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 6, 'desp': "签名方法"},
+    {'name': 'mhtSignature', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 64, 'desp': "数据签名"}
+]
+
+
+# R002-撤销接口
+# 接口接入URL：https://pay.ipaynow.cn/refund/refundOrder 请求类型：POST
+R002_PostList = [
+    {'name': 'funcode', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 5, 'desp': "功能码"},
+    {'name': 'appId', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户应用唯一标识"},
+    {'name': 'mhtRefundNo', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户退款单号"},
+    {'name': 'mhtOrderNo', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "原商户订单号"},
+    {'name': 'reason', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 256, 'desp': "退款原因"},
+    {'name': 'mhtCharset', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 6, 'desp': "商户字符集"},
+    {'name': 'signType', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 6, 'desp': "签名方法"},
     {'name': 'mhtSignature', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 64, 'desp': "数据签名"}
+]
+
+
+# Q001-退款查询接口
+# 接口接入URL：https://pay.ipaynow.cn/refund/refundQuery
+Q002_PostList = [
+    {'name': 'funcode', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 5, 'desp': "功能码"},
+    {'name': 'appId', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户应用唯一标识"},
+    {'name': 'mhtRefundNo', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 40, 'desp': "商户撤销单号"},
+    {'name': 'mhtCharset', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 6, 'desp': "商户字符集"},
+    {'name': 'signType', 'mandatory': 'Y', 'md5': 'N', 'type': 'str', 'len': 6, 'desp': "签名方法"},
+    {'name': 'mhtSignature', 'mandatory': 'Y', 'md5': 'Y', 'type': 'str', 'len': 64, 'desp': "数据签名"}
 ]
 
 # MQ001-商户支付订单查询 Response

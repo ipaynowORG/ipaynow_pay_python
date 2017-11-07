@@ -13,6 +13,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;[1.1 简介](#1.1)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1.2 如何获取](#1.2)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[1.3 使用说明](#1.3)
+
 [2. API](#2)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.1 聚合交易API](#2.1)
@@ -39,8 +42,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[微信公众号支付](#2.1.11)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[微信公众号支付(获取支付要素)](#2.1.12)
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[支付宝公众号支付](#2.1.13)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[手Q公众号支付](#2.1.15)
@@ -59,7 +60,33 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[银联网页web](#2.1.23)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[微信小程序支付](#2.1.24)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[微信小程序支付](#2.1.24)  
+
+&nbsp;&nbsp;&nbsp;&nbsp;[2.2 支付结果通知](#2.2)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[2.3 订单查询API](#2.3)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[用户主扫支付订单查询](#2.3.1)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[用户被扫支付订单查询](#2.3.2)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[商户公众号支付订单查询](#2.3.3)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[商户H5支付订单查询](#2.3.4)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[商户网页支付订单查询](#2.3.5)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[商户微信App支付订单查询](#2.3.6)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[2.4 退款API](#2.4)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[退款](#2.4.1)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[退款查询](#2.4.2)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[撤销](#2.4.3)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[撤销查询](#2.4.4)
 
 
 <h2 id='1'> 1. 概述 </h2>
@@ -67,18 +94,34 @@
 
 - 聚合支付SDK Python版本，请使用Python3 。
 
-### 1.2 如何获取 ###
- <h5 id='1.2'></h5>
+ <h4 id='1.2'>1.2 如何获取</h4>
 
 
-[demo源码](https://github.com/ipaynowORG/ipaynow_pay_python)
+[demo源码](https://github.com/ipaynowORG/ipaynow_pay_python)https://github.com/ipaynowORG/ipaynow_pay_python
+
+ <h4 id='1.3'>1.3 模块使用</h4>
+
+   使用方法:
+   
+   您可以从 GitHub 上下载 Python SDK 的源代码：
+   
+    git clone https://github.com/ipaynowORG/ipaynow_pay_python
+
+    1.cd 进入ipaynowPythonSdk 文件夹
+    2.执行 "python setup.py install"
+    3.在代码中 import ipaynow
+     参考示例代码
+     示例代码
+     cd 进入example文件夹
+     运行 python tradeTest.py 
+     
 
 
-## 2. 使用说明 ##
+## 2. API ##
 
 <h4 id='2.1'> 2.1 聚合交易API </h4>
 
-交易SDK:trade.py
+交易模块:trade.py
 
 <h5 id='2.1.1'></h5>
 
@@ -416,22 +459,7 @@
         def wx_app(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,oriMhtOrderAmt,discountAmt,amt = "1", orderno = '')
    
    
-### 2.2 DEMO使用 ###
 
-   使用方法:
-   
-   您可以从 GitHub 上下载 Python SDK 的源代码：
-   
-    git clone https://github.com/ipaynowORG/ipaynow_pay_python
-
-    1.cd 进入ipaynowPythonSdk 文件夹
-    2.执行 "python setup.py install"
-    3.在代码中 import ipaynow
-     参考示例代码
-     示例代码
-     cd 进入example文件夹
-     运行 python tradeTest.py 
-     
      
 字段含义如下:
 
@@ -568,3 +596,138 @@
          </tr>
     </table>
          
+         
+         
+<h4 id='2.3'> 2.3 订单查询API </h4>
+模块：queryOrder.py
+
+<h5 id='2.3.1'></h5>
+
+- 用户主扫支付订单查询
+
+      '''
+         主扫支付订单查询 
+         appId:商户应用id
+         appKey:商户应用秘钥
+         orderno:订单号 
+        '''
+        def query08(appId,appKey,orderno)
+       
+<h5 id='2.3.2'></h5>
+
+- 用户被扫支付订单查询
+
+      '''
+         主扫支付订单查询 
+         appId:商户应用id
+         appKey:商户应用秘钥
+         orderno:订单号 
+        '''
+        def query05(appId,appKey,orderno)
+        
+<h5 id='2.3.3'></h5>
+
+- 公众号支付订单查询
+
+      '''
+         公众号订单查询 
+         appId:商户应用id
+         appKey:商户应用秘钥
+         orderno:订单号 
+        '''
+        def query0600(appId,appKey,orderno)
+        
+        
+<h5 id='2.3.4'></h5>
+
+- H5支付订单查询
+
+      '''
+         H5支付订单查询 
+         appId:商户应用id
+         appKey:商户应用秘钥
+         orderno:订单号 
+        '''
+        def query0601(appId,appKey,orderno)
+
+
+        
+<h5 id='2.3.5'></h5>
+
+- 网页支付订单查询
+
+      '''
+         网页支付订单查询 
+         appId:商户应用id
+         appKey:商户应用秘钥
+         orderno:订单号 
+        '''
+        def query04(appId,appKey,orderno)
+
+<h5 id='2.3.6'></h5>
+
+- 小程序支付订单查询
+
+      '''
+         小程序支付订单查询 
+         appId:商户应用id
+         appKey:商户应用秘钥
+         orderno:订单号 
+        '''
+        def query14(appId,appKey,orderno)
+        
+<h4 id='2.4'> 2.4 退款API </h4>
+模块：refund.py
+
+<h5 id='2.4.1'></h5>
+
+- 退款
+
+        '''
+        退款接口
+        appId:商户应用id
+        appKey:商户应用秘钥
+        orderno:原订单号
+        mhtRefundNo:商户退款单号
+        amount:商户退款金额
+        reason:退款原因
+        '''
+        def refund(appId,appKey,orderno,mhtRefundNo,amount,reason):
+
+<h5 id='2.4.2'></h5>
+
+- 退款查询
+
+        '''
+        退款查询
+        appId:商户应用id
+        appKey:商户应用秘钥
+        mhtRefundNo:商户退款单号
+        '''
+        def refundQuery(appId,appKey,mhtRefundNo)
+
+<h5 id='2.4.3'></h5>
+
+- 撤销
+
+        '''
+        撤销接口
+        appId:商户应用id
+        appKey:商户应用秘钥
+        orderno:原订单号
+        mhtRefundNo:商户退款单号
+        reason:撤销原因
+        '''
+        def backOrder(appId,appKey,orderno,mhtRefundNo,reason)    
+
+<h5 id='2.4.4'></h5>
+
+- 撤销查询
+
+        '''
+        撤销查询接口
+        appId:商户应用id
+        appKey:商户应用秘钥
+        mhtRefundNo:商户退款单号
+        '''
+        def backOrderQuery(appId,appKey,mhtRefundNo)   

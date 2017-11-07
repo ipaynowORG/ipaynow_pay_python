@@ -7,7 +7,8 @@ from ipaynow.paramlist import N001_QueryList, N001_RespList
 from ipaynow.paramlist import N002_NotifyList
 from ipaynow.unpackMsg import UnpackMsgRecv
 #from ipaynow.utils import trans2unicode
-from ipaynowPythonSdk.ipaynow.paramlist import MQ001_PostList
+from ipaynowPythonSdk.ipaynow.paramlist import MQ001_PostList, R001_PostList, Q001_PostList, R002_PostList, \
+    Q002_PostList
 
 
 def trade(appKey,payparam = {}):
@@ -15,9 +16,25 @@ def trade(appKey,payparam = {}):
     pms = PackMsgSend(appKey,payparam,WP001_PostList)
     return pms.getResultString()
 
-def query(queryparam = {}):
+def query(appKey,queryparam = {}):
 
-    pms = PackMsgSend(queryparam,MQ001_PostList)
+    pms = PackMsgSend(appKey,queryparam,MQ001_PostList)
+    return pms.getResultString()
+
+def refund(appKey,queryparam = {}):
+    pms = PackMsgSend(appKey,queryparam,R001_PostList)
+    return pms.getResultString()
+
+def refundQuery(appKey,queryparam = {}):
+    pms = PackMsgSend(appKey,queryparam,Q001_PostList)
+    return pms.getResultString()
+
+def backOrder(appKey,queryparam = {}):
+    pms = PackMsgSend(appKey,queryparam,R002_PostList)
+    return pms.getResultString()
+
+def backOrderQuery(appKey,queryparam = {}):
+    pms = PackMsgSend(appKey,queryparam,Q002_PostList)
     return pms.getResultString()
 
 def notify(frontNotifyParam = 'Y'):

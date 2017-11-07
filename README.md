@@ -675,6 +675,58 @@
          orderno:订单号 
         '''
         def query14(appId,appKey,orderno)
+
+订单查询接口字段含义如下:
+接口接入URL：https://pay.ipaynow.cn/             请求类型：POST
+
+<table>
+        <tr>
+            <th>字段名称</th>
+            <th>字段Key</th>
+            <th>备注</th>
+        </tr>
+        <tr>
+            <td>功能码</td>
+            <td>funcode</td>
+            <td>定值：MQ002</td>
+        </tr>
+        <tr>
+            <td>接口版本号</td>
+            <td>version</td>
+            <td>定值：1.0.0</td>
+         </tr>
+           <tr>
+            <td>商户应用唯一标识</td>
+            <td>appId</td>
+            <td></td>
+         </tr>
+        <tr>
+            <td>设备类型</td>
+            <td>deviceType</td>
+            <td></td>
+         </tr>
+        <tr>
+            <td>商户订单号</td>
+            <td>mhtOrderNo</td>
+            <td></td>
+         </tr>
+        <tr>
+            <td>商户字符集</td>
+            <td>mhtCharset</td>
+            <td>定值：UTF-8</td>
+         </tr>
+        <tr>
+            <td>签名方法</td>
+            <td>mhtSignType</td>
+            <td>定值：MD5</td>
+         </tr>
+        <tr>
+            <td>数据签名</td>
+            <td>mhtSignature</td>
+            <td>除mhtSignature字段外，所有参数都参与MD5签名。</td>
+         </tr>
+    </table>
+        
         
 <h4 id='2.4'> 2.4 退款API </h4>
 模块：refund.py

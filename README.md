@@ -99,7 +99,7 @@
 
 [demo源码](https://github.com/ipaynowORG/ipaynow_pay_python.git)
 
- <h4 id='1.3'>1.3 模块使用</h4>
+ <h4 id='1.3'>1.3 使用说明</h4>
 
    使用方法:
    

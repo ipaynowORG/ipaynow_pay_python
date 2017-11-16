@@ -2,6 +2,7 @@ import os
 import sys
 import warnings
 
+from ipaynow import VERSION
 
 try:
     from setuptools import setup
@@ -27,7 +28,6 @@ if sys.version_info < (2, 6):
   
 # Don't import ipaynow module here, since deps may not be installed
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'ipaynow'))
-from version import VERSION
 
 
 setup(
@@ -37,7 +37,7 @@ setup(
     description='ipaynow python bindings',
     author='ipaynow',
     author_email='www.ipaynow.com',
-    url='https://payment.ipaynow.cn/',
+    url='https://pay.ipaynow.cn/',
     packages=['ipaynow'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",

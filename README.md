@@ -136,8 +136,9 @@
         amt:订单金额单位分，默认1分
         orderno:订单号（默认系统时间）
         channelAuthCode ; 支付授权码
+        isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def wx_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,amt = "1", orderno = ''):
+        def wx_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,amt = "1", orderno = '',isTest=True):
     
 <h5 id='2.1.2'></h5>
 
@@ -152,8 +153,9 @@
          amt:订单金额单位分，默认1分
          orderno:订单号（默认系统时间）
          channelAuthCode ; 支付授权码
+         isTest 是否测试 True 测试环境 False 生产环境
          '''
-         def ali_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,amt = "1", orderno = ''):
+         def ali_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,amt = "1", orderno = '',isTest=True):
 <h5 id='2.1.3'></h5>
 
 - 手Q被扫支付
@@ -167,8 +169,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             channelAuthCode ; 支付授权码
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def handq_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,amt = "1", orderno = ''):
+        def handq_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,amt = "1", orderno = '',isTest=True):
 
 <h5 id='2.1.4'></h5>
 
@@ -183,8 +186,10 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             channelAuthCode ; 支付授权码
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def jd_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,amt = "1", orderno = ''):
+        def jd_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,amt = "1", orderno = '',isest=True)
+        
 <h5 id='2.1.5'></h5>
 
 - 银联被扫支付
@@ -198,8 +203,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             channelAuthCode ; 支付授权码
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def union_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,amt = "1", orderno = '')
+        def union_trade05(appId,appKey,ordername,mhtOrderDetail,notifyUrl,channelAuthCode,amt = "1", orderno = '',isTest)
 <h5 id='2.1.6'></h5>
 
 - 微信主扫支付
@@ -213,8 +219,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0 返回二维码串 1 返回支付链接
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def wx_trade08(appId,appKey,ordername,mhtOrderDetail,notifyUrl,outputType,amt = "1", orderno = '')
+        def wx_trade08(appId,appKey,ordername,mhtOrderDetail,notifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 <h5 id='2.1.7'></h5>
 
 - 支付宝主扫支付
@@ -228,8 +235,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0 返回二维码串 1 返回支付链接
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def ali_trade08(appId,appKey,ordername,mhtOrderDetail,notifyUrl,outputType,amt = "1", orderno = '')
+        def ali_trade08(appId,appKey,ordername,mhtOrderDetail,notifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 <h5 id='2.1.8'></h5>
 
 - 手Q主扫支付
@@ -243,8 +251,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0 返回二维码串 1 返回支付链接
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def handq_trade08(appId,appKey,ordername,mhtOrderDetail,notifyUrl,outputType,amt = "1", orderno = '')
+        def handq_trade08(appId,appKey,ordername,mhtOrderDetail,notifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 <h5 id='2.1.9'></h5>
 
 - 京东主扫支付
@@ -258,8 +267,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0 返回二维码串 1 返回支付链接
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def jd_trade08(appId,appKey,ordername,mhtOrderDetail,notifyUrl,outputType,amt = "1", orderno = '')
+        def jd_trade08(appId,appKey,ordername,mhtOrderDetail,notifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 <h5 id='2.1.10'></h5>
 
 - 银联主扫支付
@@ -273,8 +283,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0 返回二维码串 1 返回支付链接
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def union_trade08(appId,appKey,ordername,mhtOrderDetail,notifyUrl,outputType,amt = "1", orderno = '')
+        def union_trade08(appId,appKey,ordername,mhtOrderDetail,notifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 <h5 id='2.1.11'></h5>
 
 - 微信公众号支付
@@ -289,8 +300,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0-公众号0模式
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def wx_trade0600(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '')
+        def wx_trade0600(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 
 <h5 id='2.1.13'></h5>
 
@@ -306,8 +318,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0-公众号0模式
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def ali_trade0600(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '')
+        def ali_trade0600(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 
 <h5 id='2.1.15'></h5>
 
@@ -323,8 +336,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0-公众号0模式
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def handq_trade0600(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '')
+        def handq_trade0600(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 
 <h5 id='2.1.17'></h5>
 
@@ -340,8 +354,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0-公众号0模式
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def wx_trade0601(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '')
+        def wx_trade0601(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 <h5 id='2.1.18'></h5>
 
 - 支付宝H5
@@ -356,8 +371,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0-公众号0模式
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def ali_trade0601(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '')
+        def ali_trade0601(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 <h5 id='2.1.19'></h5>
 
 - 银联H5
@@ -372,8 +388,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0-公众号0模式
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def union_trade0601(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '')
+        def union_trade0601(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 
 <h5 id='2.1.20'></h5>
 - 招行一网通H5
@@ -388,8 +405,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0-公众号0模式
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def cmbywt_trade0601(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '')
+        def cmbywt_trade0601(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 
 <h5 id='2.1.21'></h5>
 
@@ -406,8 +424,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType ; 0-公众号0模式
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def handq_trade0601(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '')
+        def handq_trade0601(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,outputType,amt = "1", orderno = '',isTest=True)
 <h5 id='2.1.22'></h5>
 
 - 支付宝网页web
@@ -422,8 +441,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType：0.返回支付跳转链接 2.返回支付页面（html）
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def ali_trade04(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,amt = "1", orderno = '',outputType=0)
+        def ali_trade04(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,amt = "1", orderno = '',outputType=0,isTest=True)
 <h5 id='2.1.23'></h5>
 
 - 银联网页web
@@ -438,8 +458,9 @@
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
             outputType：0.返回支付跳转链接 2.返回支付页面（html）
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def union_trade04(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,amt = "1", orderno = '',outputType=0)
+        def union_trade04(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,amt = "1", orderno = '',outputType=0,isTest=True)
 <h5 id='2.1.24'></h5>
 
 - 微信小程序支付
@@ -455,8 +476,9 @@
             frontNotifyUrl :商户前台通知URL
             amt:订单金额单位分，默认1分
             orderno:订单号（默认系统时间）
+            isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def wx_app(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,oriMhtOrderAmt,discountAmt,amt = "1", orderno = '')
+        def wx_app(appId,appKey,ordername,mhtOrderDetail,notifyUrl,frontNotifyUrl,oriMhtOrderAmt,discountAmt,amt = "1", orderno = '',isTest=True)
    
    
 
@@ -745,8 +767,9 @@
          appId:商户应用id
          appKey:商户应用秘钥
          orderno:订单号 
+         isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def query08(appId,appKey,orderno)
+        def query08(appId,appKey,orderno,isTest=True)
        
 <h5 id='2.3.2'></h5>
 
@@ -757,8 +780,9 @@
          appId:商户应用id
          appKey:商户应用秘钥
          orderno:订单号 
+         isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def query05(appId,appKey,orderno)
+        def query05(appId,appKey,orderno,isTest=True)
         
 <h5 id='2.3.3'></h5>
 
@@ -769,8 +793,9 @@
          appId:商户应用id
          appKey:商户应用秘钥
          orderno:订单号 
+         isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def query0600(appId,appKey,orderno)
+        def query0600(appId,appKey,orderno,isTest=True)
         
         
 <h5 id='2.3.4'></h5>
@@ -782,8 +807,9 @@
          appId:商户应用id
          appKey:商户应用秘钥
          orderno:订单号 
+         isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def query0601(appId,appKey,orderno)
+        def query0601(appId,appKey,orderno,isTest=True)
 
 
         
@@ -796,8 +822,9 @@
          appId:商户应用id
          appKey:商户应用秘钥
          orderno:订单号 
+         isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def query04(appId,appKey,orderno)
+        def query04(appId,appKey,orderno,isTest=True)
 
 <h5 id='2.3.6'></h5>
 
@@ -808,8 +835,9 @@
          appId:商户应用id
          appKey:商户应用秘钥
          orderno:订单号 
+         isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def query14(appId,appKey,orderno)
+        def query14(appId,appKey,orderno,isTest=True)
 
 订单查询接口字段含义如下:
 接口接入URL：https://pay.ipaynow.cn/             请求类型：POST
@@ -878,8 +906,9 @@
         mhtRefundNo:商户退款单号
         amount:商户退款金额
         reason:退款原因
+        isTest 是否测试 True 测试环境 False 生产环境s
         '''
-        def refund(appId,appKey,orderno,mhtRefundNo,amount,reason):
+        def refund(appId,appKey,orderno,mhtRefundNo,amount,reason,isTest=True)
 
 <h5 id='2.4.2'></h5>
 
@@ -890,8 +919,9 @@
         appId:商户应用id
         appKey:商户应用秘钥
         mhtRefundNo:商户退款单号
+        isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def refundQuery(appId,appKey,mhtRefundNo)
+        def refundQuery(appId,appKey,mhtRefundNo,isTest=True)
 
 <h5 id='2.4.3'></h5>
 
@@ -904,8 +934,9 @@
         orderno:原订单号
         mhtRefundNo:商户退款单号
         reason:撤销原因
+        isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def backOrder(appId,appKey,orderno,mhtRefundNo,reason)    
+        def backOrder(appId,appKey,orderno,mhtRefundNo,reason,isTest=True)    
 
 <h5 id='2.4.4'></h5>
 
@@ -916,5 +947,6 @@
         appId:商户应用id
         appKey:商户应用秘钥
         mhtRefundNo:商户退款单号
+        isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def backOrderQuery(appId,appKey,mhtRefundNo)   
+        def backOrderQuery(appId,appKey,mhtRefundNo,isTest=True)   

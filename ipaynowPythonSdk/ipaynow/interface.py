@@ -1,14 +1,26 @@
 #!/usr/bin/env python
 # -*- coding: utf-8; mode: python; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=python:et:sw=4:ts=4:sts=4
-from ipaynow.packMsg import PackMsgSend
-from ipaynow.paramlist import WP001_PostList, WP001_RespList
-from ipaynow.paramlist import MQ001_PostList, MQ001_RespList
-from ipaynow.paramlist import N001_QueryList, N001_RespList
-from ipaynow.paramlist import N002_NotifyList
-from ipaynow.unpackMsg import UnpackMsgRecv
-#from ipaynow.utils import trans2unicode
+from ipaynowPythonSdk.ipaynow.packMsg import PackMsgSend
+from ipaynowPythonSdk.ipaynow.paramlist import WP001_PostList, WP001_RespList
+from ipaynowPythonSdk.ipaynow.paramlist import MQ001_PostList, MQ001_RespList
+from ipaynowPythonSdk.ipaynow.paramlist import N001_QueryList, N001_RespList
+from ipaynowPythonSdk.ipaynow.paramlist import N002_NotifyList
+from ipaynowPythonSdk.ipaynow.unpackMsg import UnpackMsgRecv
 from ipaynowPythonSdk.ipaynow.paramlist import MQ001_PostList, R001_PostList, Q001_PostList, R002_PostList, \
     Q002_PostList
+
+
+#下单及查询
+proTradeUrl = "https://pay.ipaynow.cn";
+testTradeUrl = "https://dby.ipaynow.cn/api/payment";
+
+#退款撤销
+proRefundUrl = "https://pay.ipaynow.cn/refund/refundOrder";
+testRefundUrl = "https://dby.ipaynow.cn/refund_access/refundOrder";
+
+#退款查询
+proRefundQueryUrl = "https://pay.ipaynow.cn/refund/refundQuery";
+testRefundQueryUrl = "https://dby.ipaynow.cn/refund_access/refundQuery";
 
 
 def trade(appKey,payparam = {}):

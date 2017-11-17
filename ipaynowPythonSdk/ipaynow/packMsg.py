@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8; mode: python; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=python:et:sw=4:ts=4:sts=4
 
-from ipaynow.paramlist import WP001_PostList
-from ipaynow.error import APIInputError
-from ipaynow.md5Faced import md5calc
+from ipaynowPythonSdk.ipaynow.paramlist import WP001_PostList
+from ipaynowPythonSdk.ipaynow.error import APIInputError
+from ipaynowPythonSdk.ipaynow.md5Faced import md5calc
 
 try:
     from urllib import urlencode

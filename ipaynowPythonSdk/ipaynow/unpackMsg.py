@@ -8,18 +8,18 @@ except Exception:
     pass
 
 # WP001-无插件聚合支付
-from ipaynow.paramlist import WP001_PostList, WP001_RespList
+from ipaynowPythonSdk.ipaynow.paramlist import WP001_PostList, WP001_RespList
 # MQ001-商户支付订单查询
-from ipaynow.paramlist import MQ001_PostList, MQ001_RespList
+from ipaynowPythonSdk.ipaynow.paramlist import MQ001_PostList, MQ001_RespList
 # N001-商户服务器端支付结果通知
-from ipaynow.paramlist import N001_QueryList, N001_RespList
+from ipaynowPythonSdk.ipaynow.paramlist import N001_QueryList, N001_RespList
 # N002-商户前端支付结果通知
-from ipaynow.paramlist import N002_NotifyList
+from ipaynowPythonSdk.ipaynow.paramlist import N002_NotifyList
 
-import ipaynow
-from ipaynow.error import APIInputError
-from ipaynow.md5Faced import md5calc
-from ipaynow.utils import trans2unicode
+import ipaynowPythonSdk.ipaynow
+from ipaynowPythonSdk.ipaynow.error import APIInputError
+from ipaynowPythonSdk.ipaynow.md5Faced import md5calc
+from ipaynowPythonSdk.ipaynow.utils import trans2unicode
 
 try:
     from urllib import unquote
